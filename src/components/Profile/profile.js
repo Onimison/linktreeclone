@@ -10,7 +10,7 @@ const profile = () => {
       <div className='w-32 rounded-full overflow-hidden'>
         <img src={bashir} id='profile_img' alt='Photo of Bashir' className="w-full" />
       </div>
-      <p id='twitter'>Bashir Onimisi</p>
+      <p id='twitter' className='bg-red'>Bashir Onimisi</p>
       <p id='slack' className="hidden">@Onimison</p>
 
       <div className="absolute right-0 p-3 border border-dashed rounded-full border-[#D0D5DD] cursor-pointer md:hidden">
