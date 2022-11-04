@@ -1,9 +1,9 @@
 import React from 'react';
-// import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom';
+f
 import Profile from './components/Profile/profile';
 import Links from './components/Links/links';
 import Footer from './components/Footer/footer';
-import Contact from './components/Contact/contact';
+
 
 
 
