@@ -1,4 +1,5 @@
 import React from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 import slack from '../../assets/slack.png';
 // import dots from '../../assets/dots.png';
@@ -24,6 +25,11 @@ const links = () => {
       </a>
       <a href="https://books.zuri.team/design-rules" target="_blank" id='book_design' className="bg-gray w-full max-w-[50rem] p-4 rounded-lg text-center drop-shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
         <button >Design Books</button>
+      </a>
+      <a  id='contact' className="bg-gray w-full max-w-[50rem] p-4 rounded-lg text-center drop-shadow-[0_1px_2px_rgba(16,24,40,0.05)]">
+        <Link to="/contact" >
+          <button >Contact Me</button>
+        </Link>
       </a>
 
       <div className="flex justify-center gap-4 h-14 p-4">
