@@ -9,6 +9,7 @@ import {
 
 import App from './App';
 import Contact from './components/Contact/contact';
+import ErrorPage from './errorpage';
 import './index.css';
 
 
@@ -19,10 +20,12 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
+        errorElement: <ErrorPage />
     },
     {
         path: "/contact",
-        element: <Contact />
+        element: <Contact />,
+        errorElement: <ErrorPage />
     }
 ]);
 
