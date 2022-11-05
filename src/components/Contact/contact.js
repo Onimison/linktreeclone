@@ -1,6 +1,10 @@
 import React from 'react'
-
+import Footer from '../../components/Footer/footer';
 const contact = () => {
+    const onSubmitHandler = (event) => {
+        event.preventDefault();
+    };
+
     return (
         <div className='py-8 px-4 container mx-auto text-[#475467] max-w-[50rem]' >
             <div className='gap-5'>
@@ -12,10 +16,10 @@ const contact = () => {
                 </p>
             </div>
 
-            <form className="py-8 flex flex-col gap-4">
+            <form className="mb-20 y-8 flex flex-col gap-4" onSubmit={onSubmitHandler}>
                 <div className="flex flex-col gap-4 md:flex-row">
                     <div className="flex flex-col gap-2 w-full">
-                        <label className="text-[#344054] text-sm font-medium">First name</label>
+                        <label htmlFor='first_name' className="  text-[#344054] text-sm font-medium">First name</label>
                         <input
                             id="first_name"
                             placeholder="Enter your first name"
@@ -25,7 +29,7 @@ const contact = () => {
                     </div>
 
                     <div className="flex flex-col gap-2 w-full">
-                        <label className="text-[#344054] text-sm font-medium">Last name</label>
+                        <label htmlFor='last_name' className="text-[#344054] text-sm font-medium">Last name</label>
                         <input
                             id="last_name"
                             placeholder="Enter your last name"
@@ -46,7 +50,7 @@ const contact = () => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    <label className="text-[#344054] text-sm font-medium">Message</label>
+                    <label htmlFor='message' className="text-[#344054] text-sm font-medium">Message</label>
                     <textarea
                         id="message"
                         placeholder="Send me a message and I'll reply you as soon as possible..."
@@ -64,15 +68,16 @@ const contact = () => {
                     </label>
                 </div>
 
-                <div className='bg-blue-500  text-white font-bold py-2 px-4 rounded-lg'>
+                <div className='bg-blue-500  text-white font-bold py-2 px-4 rounded-lg hover:bg-[#175CD3] focus:bg-blue focus:shadow-[0px_1px_2px_rgba(16,24,40,0.05),0px_0px_0px_4px_#D1E9FF]'>
                     <button
                         id="btn__submit"
-                        className="px-2 bg-blue w-full text-white rounded-lg font-semibold"
+                        className="px-2 bg-blue w-full text-white rounded-lg font-semibold "
                     >
                         Send message
                     </button>
                 </div>
             </form>
+            <Footer />
         </div>
     )
 }
